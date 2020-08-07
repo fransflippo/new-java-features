@@ -13,7 +13,7 @@ You would expect examples of the new Java Platform Module System (previously
 code-named "Project Jigsaw") here, but that is
 currently missing because modules are not just a new language element but the
 introduction of whole new aggregation level and restructuring of the JDK (but
-you can read about modules along with some code examples [here](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=18&page=0).
+you can read about modules along with some code examples [here](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=18&page=0)).
 
 We do demonstrate:
 
@@ -30,23 +30,19 @@ is minor and doesn't warrant a code example.
 
 ## java12
 
-No new language features introduced.
+* **switchexpression** - the new `switch` expression
 
 ## java13
 
-No new language features introduced.
+* **textblocks** - text blocks
 
-## java12
+## java14
 
 * **helpfulnpes** - Helpful `NullPointerException`s
 
 * **newinstanceof** - `instanceof` pattern matching
 
 * **records** - records
-
-* **switchexpression** - the new `switch` expression
-
-* **textblocks** - text blocks
 
 ## java15
 
@@ -101,6 +97,7 @@ to eventually throw an `OutOfMemoryException`: that means the JVM was aware of i
 limits and didn't attempt to grow the heap beyond the memory limits of its environment.
 The undesirable outcome is for the app to just crash.
 
+Run `mvn package` and then:
 * `memory-tester.sh` will run the app on your local default JVM with no max heap size provided
 * `memory-tester-docker-openjdk7.sh` will run the app in a Docker container primed from the
   `openjdk:7` image with the memory limit set to 256MB and no explicit max heap size provided 
